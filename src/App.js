@@ -1,3 +1,5 @@
+// https://beta.reactjs.org/learn/thinking-in-react
+
 import './App.css';
 import { FilterableProductTable } from './components/FilterableProductTable';
 

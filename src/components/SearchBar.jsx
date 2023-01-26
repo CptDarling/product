@@ -1,9 +1,18 @@
-export const SearchBar = () => {
+export const SearchBar = ({ filterText, inStockOnly, onFilterTextChange, onInStockOnlyChange }) => {
   return (
     <form>
-      <input type="text" placeholder="Search..." />
+      <input
+        type="text"
+        placeholder="Search..."
+        defaultValue={filterText}
+        onChange={(e) => onFilterTextChange(e.target.value)}
+      />
       <label>
-        <input type="checkbox" />
+        <input
+          type="checkbox"
+          defaultChecked={inStockOnly}
+          onChange={(e) => onInStockOnlyChange(e.target.checked)}
+        />
         {' '}
         Only show products in stock
       </label>
